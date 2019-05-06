@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Web.master.cs" Inherits="HotelWebProject.Web" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>TlrHotel</title>
+    <link href="Styles/MainPage.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/MasterPage.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="Styles/chocolat.css" type="text/css"/>
+    <link rel="stylesheet" href="Styles/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="Styles/flexslider.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="Styles/font-awesome.css"/> 
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="banner-web">
+        <div class="agile_dot_info">
+             <div class="w3-header-bottom">
+                <div class="container">
+                    <div class="w3layouts-logo">
+                    <h1>
+	                    <a href="Default.aspx">TlrHotel </a>
+                    </h1>
+                    </div>
+                    <div class="top-nav">
+		                <nav class="navbar navbar-default">
+				            <ul class="nav navbar-nav">
+				                <li><a href="Default.aspx">网站首页</a></li>
+                                <li><a href="CompanyInfo/CompanyDesc.aspx">公司介绍</a></li>
+                                <li><a href="CompanyNews/NewsList.aspx">新闻动态</a></li>
+                                <li><a href="CompanyDishes/DishesShow.aspx">美食展示</a></li>
+                                <li><a href="CompanyDishes/Environment.aspx">餐厅环境</a></li>
+                                <li><a href="CompanyDishes/DishesBook.aspx">在线预订</a></li>
+                                <li><a href="CompanyInfo/Suggestion.aspx">投诉建议</a></li>
+                                <li><a href="CompanyInfo/RecruitmentList.aspx">招聘信息</a></li>
+                                <li><a class="navLast" href="/CompanyInfo/AboutUs.aspx">关于我们</a></li>
+				            </ul>	
+		                </nav>		
+                    </div>
+                    <div class="clearfix"> </div>
+                 </div>
+            </div>
+             <asp:ContentPlaceHolder ID="cphMain" runat="server">
+             </asp:ContentPlaceHolder>
+        </div>
+    </div>
+
+    <asp:ContentPlaceHolder ID="cphDown" runat="server">
+    </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

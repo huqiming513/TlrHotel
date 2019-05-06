@@ -1,0 +1,10 @@
+E:\csharp\HotelWebProject\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+E:\csharp\HotelWebProject\Models\bin\Debug\Models.dll
+E:\csharp\HotelWebProject\Models\bin\Debug\Models.pdb
+E:\csharp\HotelWebProject\Models\obj\Debug\Models.dll
+E:\csharp\HotelWebProject\Models\obj\Debug\Models.pdb
+E:\csharp\HotelWebProject\Models\obj\Debug\Models.csprojAssemblyReference.cache
+E:\workspace\vs_projects\HotelWebProject\Models\bin\Debug\Models.dll
+E:\workspace\vs_projects\HotelWebProject\Models\bin\Debug\Models.pdb
+E:\workspace\vs_projects\HotelWebProject\Models\obj\Debug\Models.dll
+E:\workspace\vs_projects\HotelWebProject\Models\obj\Debug\Models.pdb
