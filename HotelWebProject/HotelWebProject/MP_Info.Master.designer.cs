@@ -10,7 +10,7 @@
 namespace HotelWebProject {
     
     
-    public partial class Web {
+    public partial class MP_Info {
         
         /// <summary>
         /// head 控件。

@@ -120,3 +120,14 @@ E:\workspace\vs_projects\HotelWebProject\HotelWebProject\bin\Models.pdb
 E:\workspace\vs_projects\HotelWebProject\HotelWebProject\obj\Debug\HotelWebProject.csprojResolveAssemblyReference.cache
 E:\workspace\vs_projects\HotelWebProject\HotelWebProject\obj\Debug\HotelWebProject.dll
 E:\workspace\vs_projects\HotelWebProject\HotelWebProject\obj\Debug\HotelWebProject.pdb
+E:\workspace\vs_projects\TlrHotel\HotelWebProject\HotelWebProject\obj\Debug\HotelWebProject.csprojResolveAssemblyReference.cache
+E:\workspace\vs_projects\TlrHotel\HotelWebProject\HotelWebProject\obj\Debug\HotelWebProject.dll
+E:\workspace\vs_projects\TlrHotel\HotelWebProject\HotelWebProject\obj\Debug\HotelWebProject.pdb
+E:\workspace\vs_projects\TlrHotel\HotelWebProject\HotelWebProject\bin\HotelWebProject.dll.config
+E:\workspace\vs_projects\TlrHotel\HotelWebProject\HotelWebProject\bin\HotelWebProject.dll
+E:\workspace\vs_projects\TlrHotel\HotelWebProject\HotelWebProject\bin\HotelWebProject.pdb
+E:\workspace\vs_projects\TlrHotel\HotelWebProject\HotelWebProject\bin\DAL.dll
+E:\workspace\vs_projects\TlrHotel\HotelWebProject\HotelWebProject\bin\LitJSON.dll
+E:\workspace\vs_projects\TlrHotel\HotelWebProject\HotelWebProject\bin\Models.dll
+E:\workspace\vs_projects\TlrHotel\HotelWebProject\HotelWebProject\bin\DAL.pdb
+E:\workspace\vs_projects\TlrHotel\HotelWebProject\HotelWebProject\bin\Models.pdb
