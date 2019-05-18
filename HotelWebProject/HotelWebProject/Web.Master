@@ -4,13 +4,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>TlrHotel</title>
-    <link href="Styles/MainPage.css" rel="stylesheet" type="text/css" />
-    <link href="Styles/MasterPage.css" rel="stylesheet" type="text/css" />
-    <link href="Styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="Styles/chocolat.css" type="text/css"/>
-    <link rel="stylesheet" href="Styles/style.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="Styles/flexslider.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="Styles/font-awesome.css"/> 
+    <link href="/Styles/MainPage.css" rel="stylesheet" type="text/css" />
+    <link href="/Styles/MasterPage.css" rel="stylesheet" type="text/css" />
+    <link href="/Styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/Styles/chocolat.css" rel="stylesheet" type="text/css"/>
+    <link href="/Styles/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/Styles/flexslider.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="/Styles/font-awesome.css" rel="stylesheet" /> 
+    <script src="/Scripts/jquery-2.1.4.min.js" type="text/javascript"></script>
+    <script src="/Scripts/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/Scripts/vue.js" type="text/javascript"></script>
+    <script src="/Scripts/Common.js" type="text/javascript"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -28,23 +32,20 @@
                     <div class="top-nav">
 		                <nav class="navbar navbar-default">
 				            <ul class="nav navbar-nav">
-				                <li><a href="Default.aspx">网站首页</a></li>
-                                <li><a href="CompanyInfo/CompanyDesc.aspx">公司介绍</a></li>
-                                <li><a href="CompanyNews/NewsList.aspx">新闻动态</a></li>
-                                <li><a href="CompanyDishes/DishesShow.aspx">美食展示</a></li>
-                                <li><a href="CompanyDishes/Environment.aspx">餐厅环境</a></li>
-                                <li><a href="CompanyDishes/DishesBook.aspx">在线预订</a></li>
-                                <li><a href="CompanyInfo/Suggestion.aspx">投诉建议</a></li>
-                                <li><a href="CompanyInfo/RecruitmentList.aspx">招聘信息</a></li>
-                                <li><a class="navLast" href="/CompanyInfo/AboutUs.aspx">关于我们</a></li>
+				                <li><a href="/Pages/Default.aspx">网站首页</a></li>
+                                <li><a href="/Pages/NewsList.aspx">新闻动态</a></li>
+                                <li><a href="/Pages/DishesShow.aspx">美食展示</a></li>
+                                <li><a href="/Pages/RoomShow.aspx">酒店房间</a></li>
+                                <li><a href="/Pages/Book.aspx">在线预订</a></li>
+                                <li><a href="/Pages/Suggestion.aspx">投诉建议</a></li>
 				            </ul>	
 		                </nav>		
                     </div>
                     <div class="clearfix"> </div>
                  </div>
             </div>
-             <asp:ContentPlaceHolder ID="cphMain" runat="server">
-             </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="cphMain" runat="server">
+            </asp:ContentPlaceHolder>
         </div>
     </div>
 

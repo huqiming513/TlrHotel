@@ -45,6 +45,10 @@
       <HintPath>Adminhyl\TxtEditor\bin\LitJSON.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -63,284 +67,492 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Adminhyl\Adminhyl.Master" />
-    <Content Include="Adminhyl\TxtEditor\bin\LitJSON.dll" />
-    <Content Include="Adminhyl\TxtEditor\file_manager_json.ashx" />
-    <Content Include="Adminhyl\TxtEditor\upload_json.ashx" />
+    <Content Include="Admin\Book\DishOrderManager.aspx" />
+    <Content Include="Admin\Book\RoomBookManager.aspx" />
+    <Content Include="Admin\Room\RoomManager.aspx" />
+    <Content Include="Admin\Room\RoomPublish.aspx" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Images\11.jpg" />
+    <Content Include="Images\2.jpg" />
+    <Content Include="Images\dish\default.png" />
+    <Content Include="Images\hotel.jpg" />
+    <Content Include="Images\left.png" />
+    <Content Include="Images\overlay.png" />
+    <Content Include="Images\right.png" />
+    <Content Include="Images\room\1.jpg" />
+    <Content Include="Images\room\2.jpg" />
+    <Content Include="Images\room\3.jpg" />
+    <Content Include="Images\room\default.jpg" />
+    <Content Include="Images\tt1.jpg" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\Common.js" />
+    <Content Include="Scripts\dataTables\dataTables.bootstrap.css" />
+    <Content Include="Scripts\dataTables\dataTables.bootstrap.js" />
+    <Content Include="Scripts\dataTables\jquery.dataTables.js" />
+    <Content Include="Scripts\images\favicon.ico" />
+    <Content Include="Scripts\images\sort_asc.png" />
+    <Content Include="Scripts\images\sort_asc_disabled.png" />
+    <Content Include="Scripts\images\sort_both.png" />
+    <Content Include="Scripts\images\sort_desc.png" />
+    <Content Include="Scripts\images\sort_desc_disabled.png" />
+    <Content Include="Scripts\vue.js" />
+    <Content Include="Styles\about.css" />
+    <Content Include="Admin\Web.Master" />
+    <Content Include="Admin\TxtEditor\bin\LitJSON.dll" />
+    <Content Include="Admin\TxtEditor\file_manager_json.ashx" />
+    <Content Include="Admin\TxtEditor\upload_json.ashx" />
     <Content Include="bin\HotelWebProject.dll.config" />
-    <Content Include="Default2.aspx" />
     <Content Include="Handlers\ValidateCode.ashx" />
     <Content Include="Handlers\Web.config" />
     <Content Include="Images\1.jpg" />
-    <Content Include="index.html" />
-    <Content Include="MP_Dishes.Master" />
-    <Content Include="MP_Info.Master" />
-    <Content Include="MP_News.Master" />
+    <Content Include="Images\hotel-caribe-fachada-interna.jpg" />
+    <Content Include="Images\t1.jpg" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="obj\Debug\HotelWebProject.csproj.CopyComplete" />
     <Content Include="obj\Debug\HotelWebProject.csproj.CoreCompileInputs.cache" />
     <Content Include="obj\Debug\HotelWebProject.csprojAssemblyReference.cache" />
     <Content Include="obj\Debug\HotelWebProject.csprojResolveAssemblyReference.cache" />
     <Content Include="obj\Debug\ResolveAssemblyReference.cache" />
-    <Content Include="Adminhyl\Handlers\ExitSys.ashx" />
+    <Content Include="Admin\Handlers\ExitSys.ashx" />
+    <Content Include="Pages\Default.aspx" />
+    <Content Include="Pages\Book.aspx" />
+    <Content Include="Pages\DishesShow.aspx" />
+    <Content Include="Pages\RoomShow.aspx" />
+    <Content Include="Pages\NewsDetail.aspx" />
+    <Content Include="Pages\NewsList.aspx" />
+    <Content Include="Pages\Suggestion.aspx" />
+    <Content Include="Styles\awesome-bootstrap-checkbox.css" />
+    <Content Include="Template\Page\about.aspx" />
+    <Content Include="Template\Page\contact.aspx" />
+    <Content Include="Template\Page\css\about.css" />
+    <Content Include="Template\Page\css\bootstrap.css" />
+    <Content Include="Template\Page\css\contact.css" />
+    <Content Include="Template\Page\css\font-awesome.css" />
+    <Content Include="Template\Page\css\gallery.css" />
+    <Content Include="Template\Page\css\icons.css" />
+    <Content Include="Template\Page\css\jQuery.lightninBox.css" />
+    <Content Include="Template\Page\css\services.css" />
+    <Content Include="Template\Page\css\single.css" />
+    <Content Include="Template\Page\css\style.css" />
+    <Content Include="Template\Page\css\typography.css" />
+    <Content Include="Template\Page\fonts\fontawesome-webfont.svg" />
+    <Content Include="Template\Page\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Template\Page\gallery.aspx" />
+    <Content Include="Template\Page\icons.aspx" />
+    <Content Include="Template\Page\images\about.png" />
+    <Content Include="Template\Page\images\about1.jpg" />
+    <Content Include="Template\Page\images\about2.jpg" />
+    <Content Include="Template\Page\images\about3.jpg" />
+    <Content Include="Template\Page\images\banner1.png" />
+    <Content Include="Template\Page\images\banner2.png" />
+    <Content Include="Template\Page\images\banner4.png" />
+    <Content Include="Template\Page\images\banner5.png" />
+    <Content Include="Template\Page\images\c1.jpg" />
+    <Content Include="Template\Page\images\c2.jpg" />
+    <Content Include="Template\Page\images\c3.jpg" />
+    <Content Include="Template\Page\images\c4.jpg" />
+    <Content Include="Template\Page\images\c5.jpg" />
+    <Content Include="Template\Page\images\c6.jpg" />
+    <Content Include="Template\Page\images\cake.png" />
+    <Content Include="Template\Page\images\cake1.jpg" />
+    <Content Include="Template\Page\images\cake1.png" />
+    <Content Include="Template\Page\images\cake2.png" />
+    <Content Include="Template\Page\images\cake3.png" />
+    <Content Include="Template\Page\images\chef1.jpg" />
+    <Content Include="Template\Page\images\chef2.jpg" />
+    <Content Include="Template\Page\images\chef3.jpg" />
+    <Content Include="Template\Page\images\chef4.jpg" />
+    <Content Include="Template\Page\images\close.png" />
+    <Content Include="Template\Page\images\footer.jpg" />
+    <Content Include="Template\Page\images\g1.jpg" />
+    <Content Include="Template\Page\images\g10.jpg" />
+    <Content Include="Template\Page\images\g11.jpg" />
+    <Content Include="Template\Page\images\g12.jpg" />
+    <Content Include="Template\Page\images\g2.jpg" />
+    <Content Include="Template\Page\images\g3.jpg" />
+    <Content Include="Template\Page\images\g4.jpg" />
+    <Content Include="Template\Page\images\g5.jpg" />
+    <Content Include="Template\Page\images\g6.jpg" />
+    <Content Include="Template\Page\images\g7.jpg" />
+    <Content Include="Template\Page\images\g8.jpg" />
+    <Content Include="Template\Page\images\g9.jpg" />
+    <Content Include="Template\Page\images\ggs1.jpg" />
+    <Content Include="Template\Page\images\gs2.jpg" />
+    <Content Include="Template\Page\images\gs3.jpg" />
+    <Content Include="Template\Page\images\left.png" />
+    <Content Include="Template\Page\images\my.jpg" />
+    <Content Include="Template\Page\images\myabout.jpg" />
+    <Content Include="Template\Page\images\myc1.jpg" />
+    <Content Include="Template\Page\images\myc4.jpg" />
+    <Content Include="Template\Page\images\myc5.jpg" />
+    <Content Include="Template\Page\images\myc6.jpg" />
+    <Content Include="Template\Page\images\next.png" />
+    <Content Include="Template\Page\images\play-button.png" />
+    <Content Include="Template\Page\images\post1.jpg" />
+    <Content Include="Template\Page\images\post2.jpg" />
+    <Content Include="Template\Page\images\post3.jpg" />
+    <Content Include="Template\Page\images\post4.jpg" />
+    <Content Include="Template\Page\images\post5.jpg" />
+    <Content Include="Template\Page\images\post6.jpg" />
+    <Content Include="Template\Page\images\prev.png" />
+    <Content Include="Template\Page\images\right.png" />
+    <Content Include="Template\Page\images\s.jpg" />
+    <Content Include="Template\Page\images\t1.jpg" />
+    <Content Include="Template\Page\images\t2.jpg" />
+    <Content Include="Template\Page\images\t3.jpg" />
+    <Content Include="Template\Page\images\top.png" />
+    <Content Include="Template\Page\images\tt.jpg" />
+    <Content Include="Template\Page\index.aspx" />
+    <Content Include="Template\Page\js\bootstrap.js" />
+    <Content Include="Template\Page\js\easing.js" />
+    <Content Include="Template\Page\js\jquery-2.1.4.min.js" />
+    <Content Include="Template\Page\js\jquery.countup.js" />
+    <Content Include="Template\Page\js\jquery.flexisel.js" />
+    <Content Include="Template\Page\js\jQuery.lightninBox.js" />
+    <Content Include="Template\Page\js\jquery.waypoints.min.js" />
+    <Content Include="Template\Page\js\jquery.wmuSlider.js" />
+    <Content Include="Template\Page\js\move-top.js" />
+    <Content Include="Template\Page\js\simplePlayer.js" />
+    <Content Include="Template\Page\js\SmoothScroll.min.js" />
+    <Content Include="Template\Page\services.aspx" />
+    <Content Include="Template\Page\single.aspx" />
+    <Content Include="Template\Page\typography.aspx" />
+    <Content Include="Styles\comm.css" />
+    <Content Include="Styles\comm2.css" />
+    <Content Include="Scripts\easing.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.js" />
+    <Content Include="Scripts\jquery.flexisel.js" />
+    <Content Include="Template\cpts_1690_dbe\3000套网站模板免费拥有.url" />
+    <Content Include="Template\cpts_1690_dbe\fonts\fontawesome-webfont.eot" />
+    <Content Include="Template\cpts_1690_dbe\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Template\cpts_1690_dbe\fonts\fontawesome-webfont.woff" />
+    <Content Include="Template\cpts_1690_dbe\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Template\cpts_1690_dbe\fonts\FontAwesome.otf" />
+    <Content Include="Template\cpts_1690_dbe\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Template\cpts_1690_dbe\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Template\cpts_1690_dbe\找免费网站模板就上【模板之家】cssMoban.com.url" />
+    <Content Include="Template\Page\fonts\fontawesome-webfont.eot" />
+    <Content Include="Template\Page\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Template\Page\fonts\fontawesome-webfont.woff" />
+    <Content Include="Template\Page\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Template\Page\fonts\FontAwesome.otf" />
+    <Content Include="Template\Page\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Template\Page\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Template\Page\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Template\Page\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="packages.config" />
+    <Content Include="Scripts\images\Sorting icons.psd" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="Template\cpts_1690_dbe\about.html" />
+    <Content Include="Template\cpts_1690_dbe\contact.html" />
+    <Content Include="Template\cpts_1690_dbe\css\bootstrap.css" />
+    <Content Include="Template\cpts_1690_dbe\css\chocolat.css" />
+    <Content Include="Template\cpts_1690_dbe\css\flexslider.css" />
+    <Content Include="Template\cpts_1690_dbe\css\font-awesome.css" />
+    <Content Include="Template\cpts_1690_dbe\css\style.css" />
+    <Content Include="Template\cpts_1690_dbe\fonts\fontawesome-webfont.svg" />
+    <Content Include="Template\cpts_1690_dbe\gallery.html" />
+    <Content Include="Template\cpts_1690_dbe\icons.html" />
+    <Content Include="Template\cpts_1690_dbe\images\1.jpg" />
+    <Content Include="Template\cpts_1690_dbe\images\5.jpg" />
+    <Content Include="Template\cpts_1690_dbe\images\about.jpg" />
+    <Content Include="Template\cpts_1690_dbe\images\about2.jpg" />
+    <Content Include="Template\cpts_1690_dbe\images\arrow.png" />
+    <Content Include="Template\cpts_1690_dbe\images\c4.jpg" />
+    <Content Include="Template\cpts_1690_dbe\images\c5.jpg" />
+    <Content Include="Template\cpts_1690_dbe\images\c6.jpg" />
+    <Content Include="Template\cpts_1690_dbe\images\close.png" />
+    <Content Include="Template\cpts_1690_dbe\images\g1-.jpg" />
+    <Content Include="Template\cpts_1690_dbe\images\g1.jpg" />
+    <Content Include="Template\cpts_1690_dbe\images\g10-.jpg" />
+    <Content Include="Template\cpts_1690_dbe\images\g10.jpg" />
+    <Content Include="Template\cpts_1690_dbe\images\g11-.jpg" />
+    <Content Include="Template\cpts_1690_dbe\images\g11.jpg" />
+    <Content Include="Template\cpts_1690_dbe\images\g12-.jpg" />
+    <Content Include="Template\cpts_1690_dbe\images\g12.jpg" />
+    <Content Include="Template\cpts_1690_dbe\images\g2-.jpg" />
+    <Content Include="Template\cpts_1690_dbe\images\g2.jpg" />
+    <Content Include="Template\cpts_1690_dbe\images\g3-.jpg" />
+    <Content Include="Template\cpts_1690_dbe\images\g3.jpg" />
+    <Content Include="Template\cpts_1690_dbe\images\g4-.jpg" />
+    <Content Include="Template\cpts_1690_dbe\images\g4.jpg" />
+    <Content Include="Template\cpts_1690_dbe\images\g5-.jpg" />
+    <Content Include="Template\cpts_1690_dbe\images\g5.jpg" />
+    <Content Include="Template\cpts_1690_dbe\images\g6-.jpg" />
+    <Content Include="Template\cpts_1690_dbe\images\g6.jpg" />
+    <Content Include="Template\cpts_1690_dbe\images\g7-.jpg" />
+    <Content Include="Template\cpts_1690_dbe\images\g7.jpg" />
+    <Content Include="Template\cpts_1690_dbe\images\g8-.jpg" />
+    <Content Include="Template\cpts_1690_dbe\images\g8.jpg" />
+    <Content Include="Template\cpts_1690_dbe\images\g9-.jpg" />
+    <Content Include="Template\cpts_1690_dbe\images\g9.jpg" />
+    <Content Include="Template\cpts_1690_dbe\images\left.png" />
+    <Content Include="Template\cpts_1690_dbe\images\modal.jpg" />
+    <Content Include="Template\cpts_1690_dbe\images\overlay.png" />
+    <Content Include="Template\cpts_1690_dbe\images\right.png" />
+    <Content Include="Template\cpts_1690_dbe\images\t1.jpg" />
+    <Content Include="Template\cpts_1690_dbe\images\t2.jpg" />
+    <Content Include="Template\cpts_1690_dbe\images\t3.jpg" />
+    <Content Include="Template\cpts_1690_dbe\index.html" />
+    <Content Include="Template\cpts_1690_dbe\js\bootstrap.js" />
+    <Content Include="Template\cpts_1690_dbe\js\easing.js" />
+    <Content Include="Template\cpts_1690_dbe\js\jquery-1.11.1.min.js" />
+    <Content Include="Template\cpts_1690_dbe\js\jquery.chocolat.js" />
+    <Content Include="Template\cpts_1690_dbe\js\jquery.flexslider.js" />
+    <Content Include="Template\cpts_1690_dbe\js\move-top.js" />
+    <Content Include="Template\cpts_1690_dbe\js\responsiveslides.min.js" />
+    <Content Include="Template\cpts_1690_dbe\js\SmoothScroll.min.js" />
+    <Content Include="Template\cpts_1690_dbe\services.html" />
+    <Content Include="Template\cpts_1690_dbe\typography.html" />
+    <Content Include="Template\cpts_1690_dbe\说明.txt" />
     <Content Include="Web.Master" />
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <Content Include="Scripts\dataTables.bootstrap.js" />
     <Content Include="Scripts\fnReloadAjax.js" />
     <Content Include="Scripts\jquery-3.2.1.min.js" />
-    <Content Include="Scripts\jquery.dataTables.js" />
     <Content Include="Styles\bootstrap.min.css" />
     <Content Include="Styles\chocolat.css" />
-    <Content Include="Styles\dataTables.bootstrap.css" />
     <Content Include="Styles\flexslider.css" />
     <Content Include="Styles\font-awesome.css" />
     <Content Include="Styles\style.css" />
     <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Adminhyl\AdminLogin.aspx" />
-    <Content Include="Adminhyl\Book\BookManager.aspx" />
-    <Content Include="Adminhyl\Default.aspx" />
-    <Content Include="Adminhyl\Dishes\DishesManager.aspx" />
-    <Content Include="Adminhyl\Dishes\DishesPublish.aspx" />
-    <Content Include="Adminhyl\News\NewsManager.aspx" />
-    <Content Include="Adminhyl\News\NewsPublish.aspx" />
-    <Content Include="Adminhyl\Recruitment\RecruitmentManager.aspx" />
-    <Content Include="Adminhyl\Recruitment\RecruitmentModify.aspx" />
-    <Content Include="Adminhyl\Recruitment\RecruitmentPublish.aspx" />
-    <Content Include="Adminhyl\Styles\AdminCss.css" />
-    <Content Include="Adminhyl\Styles\Images\default.png" />
-    <Content Include="Adminhyl\Styles\Images\loginimg.jpg" />
-    <Content Include="Adminhyl\Styles\Images\navbg_ht.jpg" />
-    <Content Include="Adminhyl\Styles\Images\topbg_ht.png" />
-    <Content Include="Adminhyl\SuggestionList.aspx" />
-    <Content Include="Adminhyl\TxtEditor\attached\image\20140402\20140402225222_5707.png" />
-    <Content Include="Adminhyl\TxtEditor\attached\image\20140402\20140402225856_8043.png" />
-    <Content Include="Adminhyl\TxtEditor\attached\image\20140402\20140402230258_6251.jpg" />
-    <Content Include="Adminhyl\TxtEditor\attached\image\20140402\20140402230619_9746.png" />
-    <Content Include="Adminhyl\TxtEditor\attached\image\20140402\20140402230657_1688.png" />
-    <Content Include="Adminhyl\TxtEditor\attached\image\20140402\20140402230830_2181.png" />
-    <Content Include="Adminhyl\TxtEditor\demo.aspx" />
-    <Content Include="Adminhyl\TxtEditor\kindeditor.js" />
-    <Content Include="Adminhyl\TxtEditor\lang\ar.js" />
-    <Content Include="Adminhyl\TxtEditor\lang\en.js" />
-    <Content Include="Adminhyl\TxtEditor\lang\ko.js" />
-    <Content Include="Adminhyl\TxtEditor\lang\zh_CN.js" />
-    <Content Include="Adminhyl\TxtEditor\lang\zh_TW.js" />
-    <Content Include="Adminhyl\TxtEditor\plugins\anchor\anchor.js" />
-    <Content Include="Adminhyl\TxtEditor\plugins\autoheight\autoheight.js" />
-    <Content Include="Adminhyl\TxtEditor\plugins\baidumap\baidumap.js" />
-    <Content Include="Adminhyl\TxtEditor\plugins\baidumap\index.html" />
-    <Content Include="Adminhyl\TxtEditor\plugins\baidumap\map.html" />
-    <Content Include="Adminhyl\TxtEditor\plugins\clearhtml\clearhtml.js" />
-    <Content Include="Adminhyl\TxtEditor\plugins\code\code.js" />
-    <Content Include="Adminhyl\TxtEditor\plugins\code\prettify.css" />
-    <Content Include="Adminhyl\TxtEditor\plugins\code\prettify.js" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\emoticons.js" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\0.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\1.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\10.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\100.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\101.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\102.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\103.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\104.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\105.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\106.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\107.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\108.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\109.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\11.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\110.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\111.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\112.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\113.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\114.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\115.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\116.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\117.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\118.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\119.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\12.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\120.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\121.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\122.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\123.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\124.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\125.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\126.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\127.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\128.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\129.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\13.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\130.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\131.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\132.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\133.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\134.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\14.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\15.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\16.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\17.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\18.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\19.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\2.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\20.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\21.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\22.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\23.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\24.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\25.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\26.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\27.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\28.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\29.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\3.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\30.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\31.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\32.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\33.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\34.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\35.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\36.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\37.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\38.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\39.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\4.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\40.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\41.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\42.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\43.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\44.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\45.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\46.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\47.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\48.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\49.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\5.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\50.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\51.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\52.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\53.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\54.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\55.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\56.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\57.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\58.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\59.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\6.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\60.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\61.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\62.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\63.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\64.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\65.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\66.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\67.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\68.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\69.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\7.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\70.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\71.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\72.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\73.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\74.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\75.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\76.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\77.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\78.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\79.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\8.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\80.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\81.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\82.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\83.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\84.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\85.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\86.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\87.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\88.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\89.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\9.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\90.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\91.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\92.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\93.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\94.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\95.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\96.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\97.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\98.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\99.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\emoticons\images\static.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\filemanager\filemanager.js" />
-    <Content Include="Adminhyl\TxtEditor\plugins\filemanager\images\file-16.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\filemanager\images\file-64.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\filemanager\images\folder-16.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\filemanager\images\folder-64.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\filemanager\images\go-up.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\flash\flash.js" />
-    <Content Include="Adminhyl\TxtEditor\plugins\image\image.js" />
-    <Content Include="Adminhyl\TxtEditor\plugins\image\images\align_left.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\image\images\align_right.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\image\images\align_top.gif" />
-    <Content Include="Adminhyl\TxtEditor\plugins\image\images\refresh.png" />
-    <Content Include="Adminhyl\TxtEditor\plugins\insertfile\insertfile.js" />
-    <Content Include="Adminhyl\TxtEditor\plugins\lineheight\lineheight.js" />
-    <Content Include="Adminhyl\TxtEditor\plugins\link\link.js" />
-    <Content Include="Adminhyl\TxtEditor\plugins\map\map.html" />
-    <Content Include="Adminhyl\TxtEditor\plugins\map\map.js" />
-    <Content Include="Adminhyl\TxtEditor\plugins\media\media.js" />
-    <Content Include="Adminhyl\TxtEditor\plugins\multiimage\images\image.png" />
-    <Content Include="Adminhyl\TxtEditor\plugins\multiimage\images\select-files-en.png" />
-    <Content Include="Adminhyl\TxtEditor\plugins\multiimage\images\select-files-zh_CN.png" />
-    <Content Include="Adminhyl\TxtEditor\plugins\multiimage\images\swfupload.swf" />
-    <Content Include="Adminhyl\TxtEditor\plugins\multiimage\multiimage.js" />
-    <Content Include="Adminhyl\TxtEditor\plugins\pagebreak\pagebreak.js" />
-    <Content Include="Adminhyl\TxtEditor\plugins\plainpaste\plainpaste.js" />
-    <Content Include="Adminhyl\TxtEditor\plugins\preview\preview.js" />
-    <Content Include="Adminhyl\TxtEditor\plugins\quickformat\quickformat.js" />
-    <Content Include="Adminhyl\TxtEditor\plugins\table\table.js" />
-    <Content Include="Adminhyl\TxtEditor\plugins\template\html\1.html" />
-    <Content Include="Adminhyl\TxtEditor\plugins\template\html\2.html" />
-    <Content Include="Adminhyl\TxtEditor\plugins\template\html\3.html" />
-    <Content Include="Adminhyl\TxtEditor\plugins\template\template.js" />
-    <Content Include="Adminhyl\TxtEditor\plugins\wordpaste\wordpaste.js" />
-    <Content Include="Adminhyl\TxtEditor\themes\common\anchor.gif" />
-    <Content Include="Adminhyl\TxtEditor\themes\common\blank.gif" />
-    <Content Include="Adminhyl\TxtEditor\themes\common\flash.gif" />
-    <Content Include="Adminhyl\TxtEditor\themes\common\loading.gif" />
-    <Content Include="Adminhyl\TxtEditor\themes\common\media.gif" />
-    <Content Include="Adminhyl\TxtEditor\themes\common\rm.gif" />
-    <Content Include="Adminhyl\TxtEditor\themes\default\background.png" />
-    <Content Include="Adminhyl\TxtEditor\themes\default\default.css" />
-    <Content Include="Adminhyl\TxtEditor\themes\default\default.png" />
-    <Content Include="Adminhyl\TxtEditor\themes\qq\editor.gif" />
-    <Content Include="Adminhyl\TxtEditor\themes\qq\qq.css" />
-    <Content Include="Adminhyl\TxtEditor\themes\simple\simple.css" />
+    <Content Include="Admin\AdminLogin.aspx" />
+    <Content Include="Admin\Book\DeskBookManager.aspx" />
+    <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\Dishes\DishesManager.aspx" />
+    <Content Include="Admin\Dishes\DishesPublish.aspx" />
+    <Content Include="Admin\News\NewsManager.aspx" />
+    <Content Include="Admin\News\NewsPublish.aspx" />
+    <Content Include="Admin\Styles\AdminCss.css" />
+    <Content Include="Admin\Styles\Images\default.png" />
+    <Content Include="Admin\Styles\Images\loginimg.jpg" />
+    <Content Include="Admin\Styles\Images\navbg_ht.jpg" />
+    <Content Include="Admin\Styles\Images\topbg_ht.png" />
+    <Content Include="Admin\SuggestionList.aspx" />
+    <Content Include="Admin\TxtEditor\attached\image\20140402\20140402225222_5707.png" />
+    <Content Include="Admin\TxtEditor\attached\image\20140402\20140402225856_8043.png" />
+    <Content Include="Admin\TxtEditor\attached\image\20140402\20140402230258_6251.jpg" />
+    <Content Include="Admin\TxtEditor\attached\image\20140402\20140402230619_9746.png" />
+    <Content Include="Admin\TxtEditor\attached\image\20140402\20140402230657_1688.png" />
+    <Content Include="Admin\TxtEditor\attached\image\20140402\20140402230830_2181.png" />
+    <Content Include="Admin\TxtEditor\demo.aspx" />
+    <Content Include="Admin\TxtEditor\kindeditor.js" />
+    <Content Include="Admin\TxtEditor\lang\ar.js" />
+    <Content Include="Admin\TxtEditor\lang\en.js" />
+    <Content Include="Admin\TxtEditor\lang\ko.js" />
+    <Content Include="Admin\TxtEditor\lang\zh_CN.js" />
+    <Content Include="Admin\TxtEditor\lang\zh_TW.js" />
+    <Content Include="Admin\TxtEditor\plugins\anchor\anchor.js" />
+    <Content Include="Admin\TxtEditor\plugins\autoheight\autoheight.js" />
+    <Content Include="Admin\TxtEditor\plugins\baidumap\baidumap.js" />
+    <Content Include="Admin\TxtEditor\plugins\baidumap\index.html" />
+    <Content Include="Admin\TxtEditor\plugins\baidumap\map.html" />
+    <Content Include="Admin\TxtEditor\plugins\clearhtml\clearhtml.js" />
+    <Content Include="Admin\TxtEditor\plugins\code\code.js" />
+    <Content Include="Admin\TxtEditor\plugins\code\prettify.css" />
+    <Content Include="Admin\TxtEditor\plugins\code\prettify.js" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\emoticons.js" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\0.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\1.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\10.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\100.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\101.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\102.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\103.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\104.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\105.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\106.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\107.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\108.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\109.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\11.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\110.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\111.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\112.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\113.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\114.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\115.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\116.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\117.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\118.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\119.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\12.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\120.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\121.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\122.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\123.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\124.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\125.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\126.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\127.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\128.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\129.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\13.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\130.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\131.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\132.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\133.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\134.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\14.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\15.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\16.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\17.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\18.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\19.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\2.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\20.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\21.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\22.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\23.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\24.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\25.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\26.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\27.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\28.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\29.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\3.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\30.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\31.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\32.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\33.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\34.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\35.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\36.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\37.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\38.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\39.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\4.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\40.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\41.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\42.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\43.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\44.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\45.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\46.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\47.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\48.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\49.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\5.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\50.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\51.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\52.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\53.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\54.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\55.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\56.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\57.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\58.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\59.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\6.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\60.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\61.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\62.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\63.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\64.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\65.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\66.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\67.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\68.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\69.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\7.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\70.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\71.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\72.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\73.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\74.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\75.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\76.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\77.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\78.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\79.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\8.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\80.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\81.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\82.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\83.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\84.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\85.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\86.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\87.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\88.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\89.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\9.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\90.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\91.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\92.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\93.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\94.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\95.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\96.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\97.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\98.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\99.gif" />
+    <Content Include="Admin\TxtEditor\plugins\emoticons\images\static.gif" />
+    <Content Include="Admin\TxtEditor\plugins\filemanager\filemanager.js" />
+    <Content Include="Admin\TxtEditor\plugins\filemanager\images\file-16.gif" />
+    <Content Include="Admin\TxtEditor\plugins\filemanager\images\file-64.gif" />
+    <Content Include="Admin\TxtEditor\plugins\filemanager\images\folder-16.gif" />
+    <Content Include="Admin\TxtEditor\plugins\filemanager\images\folder-64.gif" />
+    <Content Include="Admin\TxtEditor\plugins\filemanager\images\go-up.gif" />
+    <Content Include="Admin\TxtEditor\plugins\flash\flash.js" />
+    <Content Include="Admin\TxtEditor\plugins\image\image.js" />
+    <Content Include="Admin\TxtEditor\plugins\image\images\align_left.gif" />
+    <Content Include="Admin\TxtEditor\plugins\image\images\align_right.gif" />
+    <Content Include="Admin\TxtEditor\plugins\image\images\align_top.gif" />
+    <Content Include="Admin\TxtEditor\plugins\image\images\refresh.png" />
+    <Content Include="Admin\TxtEditor\plugins\insertfile\insertfile.js" />
+    <Content Include="Admin\TxtEditor\plugins\lineheight\lineheight.js" />
+    <Content Include="Admin\TxtEditor\plugins\link\link.js" />
+    <Content Include="Admin\TxtEditor\plugins\map\map.html" />
+    <Content Include="Admin\TxtEditor\plugins\map\map.js" />
+    <Content Include="Admin\TxtEditor\plugins\media\media.js" />
+    <Content Include="Admin\TxtEditor\plugins\multiimage\images\image.png" />
+    <Content Include="Admin\TxtEditor\plugins\multiimage\images\select-files-en.png" />
+    <Content Include="Admin\TxtEditor\plugins\multiimage\images\select-files-zh_CN.png" />
+    <Content Include="Admin\TxtEditor\plugins\multiimage\images\swfupload.swf" />
+    <Content Include="Admin\TxtEditor\plugins\multiimage\multiimage.js" />
+    <Content Include="Admin\TxtEditor\plugins\pagebreak\pagebreak.js" />
+    <Content Include="Admin\TxtEditor\plugins\plainpaste\plainpaste.js" />
+    <Content Include="Admin\TxtEditor\plugins\preview\preview.js" />
+    <Content Include="Admin\TxtEditor\plugins\quickformat\quickformat.js" />
+    <Content Include="Admin\TxtEditor\plugins\table\table.js" />
+    <Content Include="Admin\TxtEditor\plugins\template\html\1.html" />
+    <Content Include="Admin\TxtEditor\plugins\template\html\2.html" />
+    <Content Include="Admin\TxtEditor\plugins\template\html\3.html" />
+    <Content Include="Admin\TxtEditor\plugins\template\template.js" />
+    <Content Include="Admin\TxtEditor\plugins\wordpaste\wordpaste.js" />
+    <Content Include="Admin\TxtEditor\themes\common\anchor.gif" />
+    <Content Include="Admin\TxtEditor\themes\common\blank.gif" />
+    <Content Include="Admin\TxtEditor\themes\common\flash.gif" />
+    <Content Include="Admin\TxtEditor\themes\common\loading.gif" />
+    <Content Include="Admin\TxtEditor\themes\common\media.gif" />
+    <Content Include="Admin\TxtEditor\themes\common\rm.gif" />
+    <Content Include="Admin\TxtEditor\themes\default\background.png" />
+    <Content Include="Admin\TxtEditor\themes\default\default.css" />
+    <Content Include="Admin\TxtEditor\themes\default\default.png" />
+    <Content Include="Admin\TxtEditor\themes\qq\editor.gif" />
+    <Content Include="Admin\TxtEditor\themes\qq\qq.css" />
+    <Content Include="Admin\TxtEditor\themes\simple\simple.css" />
     <Content Include="bin\DAL.dll" />
     <Content Include="bin\HotelWebProject.dll" />
     <Content Include="bin\HotelWebProject.pdb" />
     <Content Include="bin\LitJSON.dll" />
     <Content Include="bin\Models.dll" />
-    <Content Include="CompanyDishes\DishesBook.aspx" />
-    <Content Include="CompanyDishes\DishesShow.aspx" />
-    <Content Include="CompanyDishes\Environment.aspx" />
-    <Content Include="CompanyDishes\EnvironmentDetail.aspx" />
-    <Content Include="CompanyInfo\AboutUs.aspx" />
-    <Content Include="CompanyInfo\CompanyDesc.aspx" />
-    <Content Include="CompanyInfo\JoinUs.aspx" />
-    <Content Include="CompanyInfo\RecruitmentDetail.aspx" />
-    <Content Include="CompanyInfo\RecruitmentList.aspx" />
-    <Content Include="CompanyInfo\Suggestion.aspx" />
-    <Content Include="CompanyNews\NewsDetail.aspx" />
-    <Content Include="CompanyNews\NewsList.aspx" />
-    <Content Include="Default.aspx" />
     <Content Include="Images\bg.jpg" />
     <Content Include="Images\dish\100.PNG" />
     <Content Include="Images\dish\101.PNG" />
@@ -424,215 +636,152 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Adminhyl\Adminhyl.Master.cs">
-      <DependentUpon>Adminhyl.Master</DependentUpon>
+    <Compile Include="Admin\Book\DishOrderManager.aspx.cs">
+      <DependentUpon>DishOrderManager.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Adminhyl\Adminhyl.Master.designer.cs">
-      <DependentUpon>Adminhyl.Master</DependentUpon>
+    <Compile Include="Admin\Book\DishOrderManager.aspx.designer.cs">
+      <DependentUpon>DishOrderManager.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Adminhyl\AdminLogin.aspx.cs">
+    <Compile Include="Admin\Book\RoomBookManager.aspx.cs">
+      <DependentUpon>RoomBookManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Book\RoomBookManager.aspx.designer.cs">
+      <DependentUpon>RoomBookManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Room\RoomManager.aspx.cs">
+      <DependentUpon>RoomManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Room\RoomManager.aspx.designer.cs">
+      <DependentUpon>RoomManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Room\RoomPublish.aspx.cs">
+      <DependentUpon>RoomPublish.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Room\RoomPublish.aspx.designer.cs">
+      <DependentUpon>RoomPublish.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Web.Master.cs">
+      <DependentUpon>Web.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Web.Master.designer.cs">
+      <DependentUpon>Web.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminLogin.aspx.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Adminhyl\AdminLogin.aspx.designer.cs">
+    <Compile Include="Admin\AdminLogin.aspx.designer.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Adminhyl\Book\BookManager.aspx.cs">
-      <DependentUpon>BookManager.aspx</DependentUpon>
+    <Compile Include="Admin\Book\DeskBookManager.aspx.cs">
+      <DependentUpon>DeskBookManager.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Adminhyl\Book\BookManager.aspx.designer.cs">
-      <DependentUpon>BookManager.aspx</DependentUpon>
+    <Compile Include="Admin\Book\DeskBookManager.aspx.designer.cs">
+      <DependentUpon>DeskBookManager.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Adminhyl\Default.aspx.cs">
+    <Compile Include="Admin\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Adminhyl\Default.aspx.designer.cs">
+    <Compile Include="Admin\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Adminhyl\Dishes\DishesManager.aspx.cs">
+    <Compile Include="Admin\Dishes\DishesManager.aspx.cs">
       <DependentUpon>DishesManager.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Adminhyl\Dishes\DishesManager.aspx.designer.cs">
+    <Compile Include="Admin\Dishes\DishesManager.aspx.designer.cs">
       <DependentUpon>DishesManager.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Adminhyl\Dishes\DishesPublish.aspx.cs">
+    <Compile Include="Admin\Dishes\DishesPublish.aspx.cs">
       <DependentUpon>DishesPublish.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Adminhyl\Dishes\DishesPublish.aspx.designer.cs">
+    <Compile Include="Admin\Dishes\DishesPublish.aspx.designer.cs">
       <DependentUpon>DishesPublish.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Adminhyl\Handlers\ExitSys.ashx.cs">
+    <Compile Include="Admin\Handlers\ExitSys.ashx.cs">
       <DependentUpon>ExitSys.ashx</DependentUpon>
     </Compile>
-    <Compile Include="Adminhyl\News\NewsManager.aspx.cs">
+    <Compile Include="Admin\News\NewsManager.aspx.cs">
       <DependentUpon>NewsManager.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Adminhyl\News\NewsManager.aspx.designer.cs">
+    <Compile Include="Admin\News\NewsManager.aspx.designer.cs">
       <DependentUpon>NewsManager.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Adminhyl\News\NewsPublish.aspx.cs">
+    <Compile Include="Admin\News\NewsPublish.aspx.cs">
       <DependentUpon>NewsPublish.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Adminhyl\News\NewsPublish.aspx.designer.cs">
+    <Compile Include="Admin\News\NewsPublish.aspx.designer.cs">
       <DependentUpon>NewsPublish.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Adminhyl\Recruitment\RecruitmentManager.aspx.cs">
-      <DependentUpon>RecruitmentManager.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Adminhyl\Recruitment\RecruitmentManager.aspx.designer.cs">
-      <DependentUpon>RecruitmentManager.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Adminhyl\Recruitment\RecruitmentModify.aspx.cs">
-      <DependentUpon>RecruitmentModify.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Adminhyl\Recruitment\RecruitmentModify.aspx.designer.cs">
-      <DependentUpon>RecruitmentModify.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Adminhyl\Recruitment\RecruitmentPublish.aspx.cs">
-      <DependentUpon>RecruitmentPublish.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Adminhyl\Recruitment\RecruitmentPublish.aspx.designer.cs">
-      <DependentUpon>RecruitmentPublish.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Adminhyl\SuggestionList.aspx.cs">
+    <Compile Include="Admin\SuggestionList.aspx.cs">
       <DependentUpon>SuggestionList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Adminhyl\SuggestionList.aspx.designer.cs">
+    <Compile Include="Admin\SuggestionList.aspx.designer.cs">
       <DependentUpon>SuggestionList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Common\DataValidate.cs" />
-    <Compile Include="CompanyDishes\DishesBook.aspx.cs">
-      <DependentUpon>DishesBook.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CompanyDishes\DishesBook.aspx.designer.cs">
-      <DependentUpon>DishesBook.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CompanyDishes\DishesShow.aspx.cs">
-      <DependentUpon>DishesShow.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CompanyDishes\DishesShow.aspx.designer.cs">
-      <DependentUpon>DishesShow.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CompanyDishes\Environment.aspx.cs">
-      <DependentUpon>Environment.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CompanyDishes\Environment.aspx.designer.cs">
-      <DependentUpon>Environment.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CompanyDishes\EnvironmentDetail.aspx.cs">
-      <DependentUpon>EnvironmentDetail.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CompanyDishes\EnvironmentDetail.aspx.designer.cs">
-      <DependentUpon>EnvironmentDetail.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CompanyInfo\AboutUs.aspx.cs">
-      <DependentUpon>AboutUs.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CompanyInfo\AboutUs.aspx.designer.cs">
-      <DependentUpon>AboutUs.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CompanyInfo\CompanyDesc.aspx.cs">
-      <DependentUpon>CompanyDesc.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CompanyInfo\CompanyDesc.aspx.designer.cs">
-      <DependentUpon>CompanyDesc.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CompanyInfo\JoinUs.aspx.cs">
-      <DependentUpon>JoinUs.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CompanyInfo\JoinUs.aspx.designer.cs">
-      <DependentUpon>JoinUs.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CompanyInfo\RecruitmentDetail.aspx.cs">
-      <DependentUpon>RecruitmentDetail.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CompanyInfo\RecruitmentDetail.aspx.designer.cs">
-      <DependentUpon>RecruitmentDetail.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CompanyInfo\RecruitmentList.aspx.cs">
-      <DependentUpon>RecruitmentList.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CompanyInfo\RecruitmentList.aspx.designer.cs">
-      <DependentUpon>RecruitmentList.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CompanyInfo\Suggestion.aspx.cs">
-      <DependentUpon>Suggestion.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CompanyInfo\Suggestion.aspx.designer.cs">
-      <DependentUpon>Suggestion.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CompanyNews\NewsDetail.aspx.cs">
-      <DependentUpon>NewsDetail.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CompanyNews\NewsDetail.aspx.designer.cs">
-      <DependentUpon>NewsDetail.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CompanyNews\NewsList.aspx.cs">
-      <DependentUpon>NewsList.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CompanyNews\NewsList.aspx.designer.cs">
-      <DependentUpon>NewsList.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Default2.aspx.cs">
-      <DependentUpon>Default2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default2.aspx.designer.cs">
-      <DependentUpon>Default2.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Handlers\ValidateCode.ashx.cs">
       <DependentUpon>ValidateCode.ashx</DependentUpon>
     </Compile>
-    <Compile Include="MP_Dishes.Master.cs">
-      <DependentUpon>MP_Dishes.Master</DependentUpon>
+    <Compile Include="Pages\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MP_Dishes.Master.designer.cs">
-      <DependentUpon>MP_Dishes.Master</DependentUpon>
+    <Compile Include="Pages\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MP_Info.Master.cs">
-      <DependentUpon>MP_Info.Master</DependentUpon>
+    <Compile Include="Pages\Book.aspx.cs">
+      <DependentUpon>Book.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MP_Info.Master.designer.cs">
-      <DependentUpon>MP_Info.Master</DependentUpon>
+    <Compile Include="Pages\Book.aspx.designer.cs">
+      <DependentUpon>Book.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MP_News.Master.cs">
-      <DependentUpon>MP_News.Master</DependentUpon>
+    <Compile Include="Pages\DishesShow.aspx.cs">
+      <DependentUpon>DishesShow.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MP_News.Master.designer.cs">
-      <DependentUpon>MP_News.Master</DependentUpon>
+    <Compile Include="Pages\DishesShow.aspx.designer.cs">
+      <DependentUpon>DishesShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RoomShow.aspx.cs">
+      <DependentUpon>RoomShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RoomShow.aspx.designer.cs">
+      <DependentUpon>RoomShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\NewsDetail.aspx.cs">
+      <DependentUpon>NewsDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\NewsDetail.aspx.designer.cs">
+      <DependentUpon>NewsDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\NewsList.aspx.cs">
+      <DependentUpon>NewsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\NewsList.aspx.designer.cs">
+      <DependentUpon>NewsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Suggestion.aspx.cs">
+      <DependentUpon>Suggestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Suggestion.aspx.designer.cs">
+      <DependentUpon>Suggestion.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Web.Master.cs">
@@ -644,7 +793,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>

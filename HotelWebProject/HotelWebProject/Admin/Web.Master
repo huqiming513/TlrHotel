@@ -1,0 +1,87 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Web.Master.cs" Inherits="HotelWebProject.Admin.Web" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Hotel Admin</title>
+    <link href="Styles/AdminCss.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../Styles/chocolat.css" type="text/css"/>
+    <link rel="stylesheet" href="../Styles/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="../Styles/flexslider.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../Styles/font-awesome.css"/> 
+    <script type="text/javascript" src="../../Scripts/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="../../Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../Scripts/vue.js"></script>
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="banner">
+        <div class="agile_dot_info">
+             <div class="w3-header-bottom">
+                <div class="container">
+                    <div class="w3layouts-logo">
+                    <h1>
+	                    <a href="Default.aspx">TlrHotel </a>
+                    </h1>
+                    </div>
+                    <div class="top-nav">
+		                <nav class="navbar navbar-default">
+				            <ul class="nav navbar-nav">
+				                <li><a href="/Admin/Default.aspx">首页</a></li>
+                                <li class="dropdown">
+									<a href="#" class="dropdown-toggle hvr-sweep-to-right"  data-toggle="dropdown">新闻管理<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+										<li><a href="/Admin/News/NewsPublish.aspx?Operation=0">发布新闻</a></li>
+										<li><a href="/Admin/News/NewsManager.aspx">新闻列表</a></li>
+									</ul>
+								</li>
+                                <li class="dropdown">
+									<a href="#" class="dropdown-toggle hvr-sweep-to-right"  data-toggle="dropdown">菜品管理<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+										<li><a href="/Admin/Dishes/DishesPublish.aspx?Operation=0">添加菜品</a></li>
+										<li><a href="/Admin/Dishes/DishesManager.aspx">菜品列表</a></li>
+									</ul>
+								</li>
+                                <li class="dropdown">
+									<a href="#" class="dropdown-toggle hvr-sweep-to-right"  data-toggle="dropdown">房间管理<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+										<li><a href="/Admin/Room/RoomPublish.aspx?Operation=0">添加房间</a></li>
+										<li><a href="/Admin/Room/RoomManager.aspx">房间列表</a></li>
+									</ul>
+								</li>
+                                <li class="dropdown">
+									<a href="#" class="dropdown-toggle hvr-sweep-to-right"  data-toggle="dropdown">预订管理<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+										<li><a href="/Admin/Book/DishOrderManager.aspx">点餐列表</a></li>
+										<li><a href="/Admin/Book/DeskBookManager.aspx">订桌列表</a></li>
+										<li><a href="/Admin/Book/RoomBookManager.aspx">订房列表</a></li>
+									</ul>
+								</li>
+                                <li><a href="/Admin/SuggestionList.aspx">投诉管理</a></li>
+				            </ul>	
+		                </nav>		
+                    </div>
+                    <div class="clearfix"> </div>
+                 </div>
+            </div>
+           <div id="content" style="padding-top:3rem;">
+                <asp:ContentPlaceHolder ID="cphMain" runat="server">
+                </asp:ContentPlaceHolder>
+           </div>  
+           <div id="footer">
+                <div id="bq">
+                    <a target="_blank" href="/Admin/Default.aspx">[网站首页]</a>&nbsp;&nbsp;版权所有 Copyright(C)2019-2022
+                    TlrHotel&nbsp;&nbsp;&nbsp;<asp:Literal ID="ltaAdmin" runat="server"></asp:Literal>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="container" style="display:none;">
+    </div>
+    </form>
+</body>
+</html>

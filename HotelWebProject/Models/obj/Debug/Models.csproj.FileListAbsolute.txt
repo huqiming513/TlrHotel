@@ -8,3 +8,14 @@ E:\workspace\vs_projects\HotelWebProject\Models\bin\Debug\Models.dll
 E:\workspace\vs_projects\HotelWebProject\Models\bin\Debug\Models.pdb
 E:\workspace\vs_projects\HotelWebProject\Models\obj\Debug\Models.dll
 E:\workspace\vs_projects\HotelWebProject\Models\obj\Debug\Models.pdb
+e:\Users\lenovo\Desktop\TlrHotel-master\HotelWebProject\Models\bin\Debug\Models.dll
+e:\Users\lenovo\Desktop\TlrHotel-master\HotelWebProject\Models\bin\Debug\Models.pdb
+e:\Users\lenovo\Desktop\TlrHotel-master\HotelWebProject\Models\obj\Debug\Models.dll
+e:\Users\lenovo\Desktop\TlrHotel-master\HotelWebProject\Models\obj\Debug\Models.pdb
+E:\工作文档\大三下课程\C#程序设计\实验代码\TlrHotel\HotelWebProject\Models\bin\Debug\Models.dll
+E:\工作文档\大三下课程\C#程序设计\实验代码\TlrHotel\HotelWebProject\Models\bin\Debug\Models.pdb
+E:\工作文档\大三下课程\C#程序设计\实验代码\TlrHotel\HotelWebProject\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+E:\工作文档\大三下课程\C#程序设计\实验代码\TlrHotel\HotelWebProject\Models\obj\Debug\Models.dll
+E:\工作文档\大三下课程\C#程序设计\实验代码\TlrHotel\HotelWebProject\Models\obj\Debug\Models.pdb
+E:\工作文档\大三下课程\C#程序设计\实验代码\TlrHotel\HotelWebProject\Models\bin\Debug\Newtonsoft.Json.dll
+E:\工作文档\大三下课程\C#程序设计\实验代码\TlrHotel\HotelWebProject\Models\bin\Debug\Newtonsoft.Json.xml

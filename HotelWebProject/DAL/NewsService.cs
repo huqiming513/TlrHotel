@@ -14,13 +14,13 @@ namespace DAL
     {
         public int PublishNews(News objNews)
         {
-            string sql = "insert into News(NewsTitle,NewsContents,CategoryId) values(@NewsTitle,@NewsContents,@CategoryId)";
+            string sql = "INSERT INTO News(NewsTitle,NewsContents,CategoryId) VALUES(@NewsTitle,@NewsContents,@CategoryId)";
             SqlParameter[] param = new SqlParameter[]
             {
                 new SqlParameter("@NewsTitle",objNews.NewsTitle),
                 new SqlParameter("@NewsContents",objNews.NewsContents),
                 new SqlParameter("@CategoryId",objNews.CategoryId),
-               
+
             };
             return SQLHelper.Update(sql, param);
         }
@@ -50,13 +50,14 @@ namespace DAL
             };
             return SQLHelper.Update(sql, param);
         }
-        public List<News>GetNews(int count)
+
+        public List<News> GetNews(int count)
         {
             string sql = "select top " + count + " NewsId,NewsTitle,NewsContents,NewsCategory.CategoryId,CategoryName,PublishTime from News";
             sql += " inner join NewsCategory on NewsCategory.CategoryId=News.CategoryId Order by PublishTime DESC";
             List<News> list = new List<News>();
             SqlDataReader objReader = SQLHelper.GetReader(sql);
-            while(objReader.Read())
+            while (objReader.Read())
             {
                 list.Add(new News()
                 {
@@ -93,7 +94,7 @@ namespace DAL
                     NewsTitle = objReader["NewsTitle"].ToString(),
                     NewsContents = objReader["NewsContents"].ToString(),
                     CategoryId = Convert.ToInt32(objReader["CategoryId"]),
-                   // CategoryName = objReader["categoryName"].ToString(),
+                    // CategoryName = objReader["categoryName"].ToString(),
                     PublishTime = Convert.ToDateTime(objReader["PublishTime"])
                 };
             }

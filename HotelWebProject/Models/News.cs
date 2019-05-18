@@ -5,6 +5,7 @@ using System.Text;
 
 namespace Models
 {
+    [Serializable]
     public class News
     {
         public int NewsId { get; set; }

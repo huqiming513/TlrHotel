@@ -22,13 +22,13 @@ namespace xiketangPro.Handlers
                 return;
             }
             //获取请求来路的完整URL
-            string url = context.Request.UrlReferrer.AbsoluteUri;
-            if (!url.Contains("/CompanyDishes/DishesBook.aspx") &&
-                 !url.Contains("/CompanyInfo/Suggestion.aspx"))           
-            {
-                context.Response.Write("请求错误！拒绝访问！");
-                return;
-            }
+            //string url = context.Request.UrlReferrer.AbsoluteUri;
+            //if (!url.Contains("/Pages/Book.aspx") &&
+            //     !url.Contains("/Pages/Suggestion.aspx"))           
+            //{
+            //    context.Response.Write("请求错误！拒绝访问！");
+            //    return;
+            //}
             //将验证码保存到Session中
             context.Session["CheckCode"] = CreateCode();
             //创建并输出带验证码的图片

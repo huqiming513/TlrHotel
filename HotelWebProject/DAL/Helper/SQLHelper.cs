@@ -48,7 +48,7 @@ namespace DAL
             return cmd.ExecuteReader(CommandBehavior.CloseConnection);
         }
         #region 执行带参数的SQL语句
-        public static int Update(String sql,SqlParameter[] parameters)
+        public static int Update(string sql,SqlParameter[] parameters)
         {
             SqlConnection conn = new SqlConnection(connString);
             SqlCommand cmd = new SqlCommand(sql, conn);
@@ -112,5 +112,22 @@ namespace DAL
             }
         }
         #endregion
+
+
+        public static void MultyInsert(DataTable dataTable)
+        {
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                SqlBulkCopy bulkCopy = new SqlBulkCopy(conn);
+                bulkCopy.DestinationTableName = dataTable.TableName;
+                bulkCopy.BatchSize = dataTable.Rows.Count;
+                conn.Open();
+                if (dataTable != null && dataTable.Rows.Count != 0)
+                {
+                    bulkCopy.WriteToServer(dataTable);
+                }
+            }
+        }
+        
     }
 }
